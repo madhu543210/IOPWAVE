@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IOPWAVE - Dashboard</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-auth.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-database.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-eye"></i></span>
+        <span>IOPWAVE</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h1>Glaucoma Monitoring Dashboard</h1>
+
+    <div class="iop-display">
+      <h2>Current IOP</h2>
+      <div id="current-iop">--</div>
+      <div id="iop-status">Waiting for data...</div>
+    </div>
+
+    <div class="dashboard">
+      <div class="card">
+        <h3>IOP History</h3>
+        <canvas id="iop-chart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Manual IOP Check</h3>
+        <form id="manual-iop-form">
+          <input type="number" id="manual-iop" required>
+          <input type="number" id="age" required>
+          <select id="family-history">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <button class="btn btn-primary">Check Risk</button>
+        </form>
+        <div id="risk-result"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Device Status</h3>
+      <p>Status: <span id="status-text"></span></p>
+      <p>Last Updated: <span id="last-updated"></span></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+     <p>&copy; 2025 IOPWave. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

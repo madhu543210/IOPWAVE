@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IOPWAVE - Home</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-database.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-eye"></i></span>
+        <span>IOPWAVE</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <h1>Welcome to IOPWAVE</h1>
+    <p>
+      An innovative IoT-based glaucoma monitoring system that helps detect and
+      track Intraocular Pressure (IOP) for early glaucoma diagnosis and management.
+    </p>
+    <a href="dashboard.html" class="btn btn-primary">View Dashboard</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>About Glaucoma</h2>
+    <div class="card">
+      <p>
+        Glaucoma is a group of eye conditions that damage the optic nerve, which is
+        vital for good vision. This damage is often caused by abnormally high
+        pressure in your eye (intraocular pressure or IOP). Glaucoma is one of the
+        leading causes of blindness for people over the age of 60.
+      </p>
+      <p>
+        It can occur at any age but is more common in older adults. Many forms of
+        glaucoma have no warning signs, and the effect is so gradual that you may
+        not notice a change in vision until the condition is at an advanced stage.
+      </p>
+      <p>
+        Because vision loss due to glaucoma can't be recovered, it's important to
+        have regular eye exams that include measurements of your eye pressure so a
+        diagnosis can be made in its early stages and treated appropriately.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- IDENTIFICATION -->
+<section id="identification">
+  <div class="container">
+    <h2>How to Identify Glaucoma</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3 class="card-title">Early Symptoms</h3>
+        <ul>
+          <li>Patchy blind spots in peripheral or central vision</li>
+          <li>Tunnel vision in advanced stages</li>
+          <li>Severe headache</li>
+          <li>Eye pain</li>
+          <li>Blurred vision</li>
+          <li>Halos around lights</li>
+          <li>Eye redness</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Risk Factors</h3>
+        <ul>
+          <li>High intraocular pressure (IOP)</li>
+          <li>Age over 60</li>
+          <li>Family history of glaucoma</li>
+          <li>Diabetes, heart disease, high blood pressure</li>
+          <li>Eye injuries</li>
+          <li>Long-term corticosteroid use</li>
+          <li>Thin corneas</li>
+          <li>Extreme near/far sightedness</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Diagnostic Tests</h3>
+        <ul>
+          <li>Tonometry – measures IOP</li>
+          <li>Ophthalmoscopy – optic nerve exam</li>
+          <li>Perimetry – peripheral vision</li>
+          <li>Gonioscopy – drainage angle</li>
+          <li>Pachymetry – corneal thickness</li>
+          <li>OCT – Optical Coherence Tomography</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXISTING MODELS -->
+<section id="existing-models">
+  <div class="container">
+    <h2>Existing Monitoring Models</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3 class="card-title">Goldmann Applanation Tonometry</h3>
+        <p>
+          The gold standard for IOP measurement, requiring clinical setup and
+          trained professionals.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Rebound Tonometry</h3>
+        <p>
+          Portable probe-based measurement with brief corneal contact.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Non-contact Tonometry</h3>
+        <p>
+          Air-puff method, convenient for screening but less accurate.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR MODEL -->
+<section id="our-model">
+  <div class="container">
+    <h2>Our IoT-Based Model</h2>
+    <div class="card">
+      <h3 class="card-title">GlaucoGuard System</h3>
+      <p>
+        Our system uses an ESP32 microcontroller with ultrasonic sensing to
+        provide non-invasive, real-time IOP monitoring.
+      </p>
+      <p>
+        Acoustic radiation force is used to calculate corneal deformation, which
+        correlates with IOP. Data is securely transmitted to the cloud.
+      </p>
+      <ul>
+        <li>Real-time IOP monitoring</li>
+        <li>Cloud-based analysis</li>
+        <li>Remote access</li>
+        <li>Early spike detection</li>
+        <li>User-friendly web interface</li>
+        <li>Affordable healthcare solution</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <h2>Our Team</h2>
+    <div class="grid">
+        <div class="card team-member">
+        <h3>Madhumitha P</h3>
+        <p>Electronics and Communication Engineer</p>
+      </div>
+      <div class="card team-member">
+        <h3>Krishnapriya S</h3>
+        <p>Electronics and Communication Engineer</p>
+      </div>
+      
+      <div class="card team-member">
+        <h3>Madhumitha S</h3>
+        <p>Electronics and Communication Engineer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 IOPWave. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
